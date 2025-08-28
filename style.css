@@ -1,0 +1,136 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: #f0f4f8;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #1a237e;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+header p {
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Navbar using Flexbox */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: #3949ab;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Grid layout for main content */
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+/* Content + Sidebar */
+.content {
+  background: #e8eaf6;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+.sidebar {
+  background: #c5cae9;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+/* Cards using Flexbox */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 30%;
+  background: #7986cb;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #5c6bc0;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 1.5rem;
+  background: #e3f2fd;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background: #1a237e;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+/* Tablet view */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex: 1 1 45%;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
